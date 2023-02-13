@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".ui.tours.ToursFragment">
+
+
+    <LinearLayout
+        android:id="@+id/ll_tours"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_this"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
+            android:background="@drawable/radius_top"
+            android:hint="Откуда"
+            android:paddingStart="16dp" />
+
+        <EditText
+            android:id="@+id/et_where"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/grey"
+            android:hint="Куда"
+            android:paddingStart="16dp" />
+
+        <EditText
+            android:id="@+id/et_number"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/grey"
+            android:hint="Сколько человек"
+            android:paddingStart="16dp" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_date"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/et_date"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:background="@color/grey"
+                android:hint="Когда"
+                android:paddingStart="16dp"
+                android:textSize="17sp"
+                android:paddingTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_calendar" />
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/tv_price"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/radius_bottom"
+            android:hint="Цена"
+            android:paddingStart="16dp" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="350dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:max="4"
+            android:min="0"
+            android:progressDrawable="@drawable/progress_seekbar"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_price"
+            android:layout_width="364dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/price_3000"
+                android:layout_width="74dp"
+                android:layout_height="28dp"
+                android:clickable="true"
+                android:text="от3000"
+                android:background="@color/yellow"
+                />
+
+            <TextView
+                android:id="@+id/price_5000"
+                android:layout_width="74dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="74dp"
+                android:clickable="true"
+                android:text="от5000"
+                android:paddingStart="4dp"
+                android:background="@color/yellow"/>
+
+            <TextView
+                android:id="@+id/price_7000"
+                android:layout_width="74dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="148dp"
+                android:clickable="true"
+                android:text="от7000"
+                android:paddingStart="6sp"
+                android:background="@color/yellow"/>
+
+            <TextView
+                android:id="@+id/price_10000"
+                android:layout_width="74dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="218dp"
+                android:clickable="true"
+                android:text="от10000"
+                android:paddingStart="16dp"
+                android:background="@color/yellow"/>
+
+            <TextView
+                android:id="@+id/price_20000"
+                android:layout_width="74dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="290dp"
+                android:clickable="true"
+                android:paddingStart="18dp"
+                android:text="от20000"
+                android:background="@color/yellow"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <Button
+            android:id="@+id/btn_tours"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/orange"
+            android:text="Найти туры" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="355dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:text="Рекомендации"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="440dp" />
+
+
+
+
+
+</FrameLayout>

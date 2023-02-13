@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_tours">
+
+    <fragment
+        android:id="@+id/nav_faq"
+        android:name="com.alexbar.tour.ui.faq.FaqFragment"
+        android:label="FAQ"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.alexbar.tour.ui.setting.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/nav_bonus"
+        android:name="com.alexbar.tour.ui.bonus.BonusFragment"
+        android:label="Bonus"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_tours"
+        android:name="com.alexbar.tour.ui.tours.ToursFragment"
+        android:label="                Tours.Kg"
+        tools:layout="@layout/fragment_tours" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.alexbar.tour.ui.about.AboutUsFragment"
+        android:label="About_us"
+        tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.alexbar.tour.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_nav_registr"
+            app:destination="@id/nav_registr" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_registr"
+        android:name="com.alexbar.tour.ui.registration.RegistrFragment"
+        android:label="Registration"
+        tools:layout="@layout/fragment_registr" />
+
+
+</navigation>

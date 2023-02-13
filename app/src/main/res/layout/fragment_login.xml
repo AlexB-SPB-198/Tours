@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/fragment_horizontal_margin"
+    android:paddingTop="@dimen/fragment_vertical_margin"
+    android:paddingRight="@dimen/fragment_horizontal_margin"
+    android:paddingBottom="@dimen/fragment_vertical_margin"
+    tools:context="ui.registration.LoginFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Авторизация"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/prompt_email"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/prompt_password"
+        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="64dp"
+        android:text="Войти"
+        android:backgroundTint="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="64dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcv_google"
+        android:layout_width="204dp"
+        android:layout_height="34dp"
+        app:layout_constraintEnd_toEndOf="@+id/login"
+        app:layout_constraintStart_toStartOf="@+id/login"
+        app:layout_constraintTop_toBottomOf="@id/login"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/blue"
+        >
+
+        <ImageView
+            android:id="@+id/iv_google"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/google_logo"
+            android:background="@drawable/radius_google"
+            />
+        <TextView
+            android:id="@+id/tv_google"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Зарегистрироваться с помощью Google"
+            android:textSize="8sp"
+            android:textColor="@color/white"
+            android:paddingTop="8dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="30dp"
+            android:lines="2"
+            android:textAlignment="center"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/no_account"
+        android:layout_width="118dp"
+        android:layout_height="26dp"
+        app:layout_constraintEnd_toEndOf="@+id/mcv_google"
+        app:layout_constraintStart_toStartOf="@+id/mcv_google"
+        app:layout_constraintTop_toBottomOf="@+id/mcv_google"
+        android:layout_marginTop="50dp"
+        android:text="Нет аккаунта?
+    Пройдите регистрацию"
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_registration"
+        android:layout_width="143dp"
+        android:layout_height="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/no_account"
+        app:layout_constraintStart_toStartOf="@+id/no_account"
+        app:layout_constraintTop_toBottomOf="@+id/no_account"
+        android:layout_marginTop="30dp"
+        android:text="Зарегистрироваться"/>
+
+    <Button
+        android:id="@+id/btn_registration"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="30dp"
+        android:text="Войти как гость"
+        android:textColor="@color/black"
+        android:textSize="8sp"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/grey"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
